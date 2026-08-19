@@ -2,8 +2,8 @@ from pathlib import Path
 
 import pytest
 
-from src.first_bot.exceptions import FileReadError
-from src.first_bot.readers import CsvReader, XlsxReader, reader_factory
+from first_bot.exceptions import FileReadError
+from first_bot.readers import CsvReader, XlsxReader, reader_factory
 
 
 def test_factory_retorna_csv_reader():

@@ -1,11 +1,13 @@
 from pathlib import Path
 from datetime import datetime
+from typing import Union
 
 import pandas as pd
 from loguru import logger
 
 import first_bot.config as cfg
 from first_bot.models import Solicitud
+from first_bot.processable_file import ProcessableInputFile
 from first_bot.utils import output_filename
 
 
@@ -22,7 +24,7 @@ def setup_logging():
 
 
 def guardar_resultados(
-    input_path: Path,
+    input_path: Union[Path, ProcessableInputFile],
     unicos: list[Solicitud],
     duplicados: list[dict],
     errores: list[dict],

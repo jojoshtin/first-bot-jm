@@ -4,6 +4,12 @@ from typing import Literal
 
 from pydantic import BaseModel, EmailStr, field_validator, model_validator
 
+from first_bot.processable_file import (
+    ProcessableFileFactory,
+    ProcessableInputFile,
+    ProcessableOutputFile,
+)
+
 
 class Persona(BaseModel):
     """Datos personales mapeables al formulario web."""
